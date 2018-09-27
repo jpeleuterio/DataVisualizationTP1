@@ -21,12 +21,12 @@ var estados = d3.json("Brasil_Estados.geojson", function (data) {
                 var nome_estado = svg.selectAll("path")
                                      .append('svg:title').text(function (data){return data.name; });
 });
-var nomes = d3.csv("lista_presidentes.csv", function (d){
+var nomes = d3.csv("presidentes.csv", function (d){
               var svg= d3.select("body").append('svg').attr('height','100%').attr('width','50%')
 
               //Pegando nomes e ID`s dos presidentes
               var nome = svg.selectAll("text")
-                             .data(d)
+                             .data(d3.map(d,function(d) {return d.id_candidate_num; }).keys())
                              .enter().append('text')
                              .attr('x', 90)
                              .attr('y',function (d) {return d.pos*50;})
