@@ -36,5 +36,5 @@ var nomes = d3.csv("presidente.csv", function (d){
                              .attr('stroke-width','1')
                              .attr('text-anchor','start')
                              .attr('dominant-baseline', 'middle')
-                             .text(function(d) {return d.cat_candidate_name;})
+                             .text(function(d) {return d;})
 });
