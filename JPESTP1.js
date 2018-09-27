@@ -26,10 +26,10 @@ var nomes = d3.csv("presidente.csv", function (d){
 
               //Pegando nomes e ID`s dos presidentes
               var nome = svg.selectAll("text")
-                             .data(d3.map(d,function(data) {return data.id_candidate_num; }).keys())
+                             .data(d3.map(d,function(data) {return data.id_candidate_name; }).keys())
                              .enter().append('text')
                              .attr('x', 90)
-                             .attr('y',function (d) {return d.pos*50;})
+                             .attr('y',function (d,i) {return i*50;})
                              .attr('fill','black')
                              .attr('font-size',15)
                              .attr('stroke','red')
