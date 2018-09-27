@@ -1,0 +1,10 @@
+html,body{
+margin : 0;
+height : 100%;
+}
+path {
+
+  fill: green ;
+  stroke: darkblue;
+  stroke-width: 1;
+}
