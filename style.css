@@ -1,10 +1,154 @@
-html,body{
-margin : 0;
-height : 100%;
-}
-path {
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
-  fill: green ;
-  stroke: darkblue;
-  stroke-width: 1;
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
 }
+
+/*---Index---*/
+#index{
+  text-align: center;
+}
+
+.navbar {
+  padding: .8rem;
+  background-color: #3f3f3f;
+}
+
+.navbar-nav li{
+  padding-right: 20px;
+}
+
+.navbar-text{
+  font-size: 1.1em;
+  color: #000 !important;
+}
+
+.nav-link{
+  font-size: 1.1em !important
+}
+
+.welcome {
+  background-color: #CDCDCD;
+  text-align: center;
+}
+
+.padding{
+  padding-bottom: 2rem;
+}
+
+.comment{
+  margin: 0 auto;
+}
+footer{
+  height: 60px;
+  background-color: #3f3f3f;
+  color: #000;
+}
+
+/*---V1---*/
+
+
+#zoom{
+text-align: center
+}
+
+.state {
+  fill: #ddc;
+  fill-opacity: 1;
+}
+
+.state_contour {
+  fill: none;
+  stroke: black;
+  stroke-linejoin: round;
+  stroke-width: 0.2;
+}
+.state_general{
+  stroke-linejoin: round;
+  stroke: black;
+  stroke-width: 0.2;
+}
+
+.state_general:hover{
+  stroke-linejoin: round;
+  stroke: Black;
+  stroke-width: 0.8;
+}
+
+
+.state_borders{
+  fill: none;
+  stroke: black;
+  stroke-linejoin: round;
+  stroke-width: 0.2;
+}
+
+#label {
+  border: 1px black solid;
+  width: 15px;
+  height: 300px;
+  background-color: #FFFFFF;
+  background-image: -webkit-linear-gradient(to bottom, #000000, #FFFFFF);
+  background-image: linear-gradient(to bottom, #000000, #FFFFFF);
+}
+
+.empty{
+  height: 128px;
+}
+
+#label-title {
+  width: 300px;
+  left: -115px;
+  transform: rotate(-90deg);
+  font-size: 14px;
+}
+
+.label {
+  position: absolute;
+  font-size: 12px;
+  left: 15px;
+}
+
+#minID {
+  top: 280px;
+  display: none;
+}
+
+#maxID {
+  top: 280px;
+  display: none;
+}
+
+#minValue {
+  top: 280px;
+  left: -5px;
+}
+
+#maxValue {
+  left: -10px;
+}
+
+.center{
+  text-align: center;
+}
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JPES - TP1 - Visualização de Dados</title>
+
+      <script src="https://d3js.org/topojson.v1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"></link>
+
+    <script type="text/javascript" src="js/d3.v4.js"></script>
+    <script type="text/javascript" src="js/presidente.js"></script>
+    <script type="text/javascript" src="js/JPESTP1-V1.js"></script>
+
+  </head>
+  <body>
+
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top">
+        <div class = "container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="img/dcc.png"></a>
+          <span class="navbar-text">
+            <b>Eleições 2014 - TP1 - João Paulo Eleutério Silva</b>
+          </span>
+            <button class"navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Introdução</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="JPES-TP1-V1.html">Visualização 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="JPES-TP1-V2.html">Visualização 2</a>
+                </li>
+              </ul>
+            </div>
+
+        </div>
+      </nav>
+
+      <!--- Introdução -->
+      <div id="index" class="container-fluid">
+        <br>
+        <br>
+        <div class="container-fluid padding">
+
+          <div class="row welcome text-center">
+            <div class="col-12">
+              <h1 id="titulo" class="display-4">Eleições 2014</h1>
+            </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <h3 class="lead">Trabalho prático 1, desenvolvido por <b>João Paulo
+               Eleutério Silva</b>, para disciplina de Visualização de Dados 2018-2.</h3>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="row comment text-center">
+          <div class="col-12">
+            <p>Duas visualizações são apresentadas, sendo estas acessadas através
+              dos <i>links</i> no canto superior esquerdo:</p>
+          </div>
+        </div>
+
+        <div class="row comment text-center">
+          <div class="col-12">
+            <p>
+              A distribuição dos votos recebidos por cada candidato à presidência
+              entre os estados do Brasil é apresentada em <a href="JPES-TP1-V1.html">
+              <b>Visualização 1</b></a>.
+            </p>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p>
+              A diferença entre os votos recebidos no primeiro e no segundo turno
+              pelos candidatos à presidência do Brasil é apresentada em
+              <a href="JPES-TP1-V2.html"><b>Visualização 2</b></a>.
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+      <!--- Rodapé -->
+      <footer>
+        <div class="container-fluid padding">
+          <div class="row text-bottom">
+            <div class="col-sx-6 col-md-6">
+              <p>Visualização de Dados 2108/2</p>
+            </div>
+            <div class="col-sx-6 col-md-6">
+              <img src="img/ufmg.png" class="img-fluid float-right" alt="Responsive image">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

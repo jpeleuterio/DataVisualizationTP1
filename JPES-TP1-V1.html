@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JPES - TP1 - Visualização de Dados</title>
+
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src="https://d3js.org/topojson.v1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-dark">
+      <div class = "container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="img/dcc.png"></a>
+        <span class="navbar-text">
+          <b>Eleições 2014 - TP1 - João Paulo Eleutério Silva</b>
+        </span>
+          <button class"navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Introdução</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="JPES-TP1-V1.html">Visualização 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="JPES-TP1-V2.html">Visualização 2</a>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </nav>
+
+    <!--- Area de visuzalizacao -->
+    <div class="container-fluid text-center">
+
+      <!--- Titulo -->
+      <div class="row">
+        <div class="col-md-12 titulo">
+          <h2>Distribuição dos votos dos candidatos à presidência</h2>
+        </div>
+      </div>
+
+      <!---Area Mapas--->
+      <div class="row text-center">
+
+          <!---Mapa geral a esquerda--->
+          <div class="col-sm-5 text-center">
+            <div id="zoom" class="row zoom text-center">Visão resultado geral</div>
+            <div id="svg0" class="row"></div>
+          </div>
+
+          <!---Minimos Multiplos--->
+          <div class="col-sm-6">
+
+              <!---Primeira coluna de mapas: 1 , 4, 7 , 10--->
+              <div class="col-sm-4">
+                <div class="row">
+                  <div id="presidente1" class="row nome"></div>
+                  <div id="svg1" class="row"></div>
+                </div>
+                <div class="row">
+                  <div id="presidente4" class="row nome"></div>
+                  <div id="svg4" class="row"></div>
+                </div>
+                <div class="row">
+                  <div id="presidente7" class="row nome"></div>
+                  <div id="svg7" class="row"></div>
+                </div>
+                <div class="row">
+                  <div id="presidente10" class="row nome"></div>
+                  <div id="svg10" class="row"></div>
+                </div>
+              </div>
+
+              <!---Segunda coluna de mapas: 2 , 5, 8 , 11--->
+              <div class="col-sm-4">
+                <div class="row">
+                  <div id="presidente2" class="row nome"></div>
+                  <div id="svg2" class="row"></div>
+                </div>
+                <div class="row">
+                  <div id="presidente5" class="row nome"></div>
+                  <div id="svg5" class="row"></div>
+                </div>
+                <div class="row">
+                  <div id="presidente8" class="row nome"></div>
+                  <div id="svg8" class="row"></div>
+                </div>
+                <div class="row">
+                  <div id="presidente11" class="row nome"></div>
+                  <div id="svg11" class="row"></div>
+                </div>
+              </div>
+
+            <!---Terceira coluna de mapas: 3 , 6, 9--->
+              <div class="col-sm-4">
+                <div class="row">
+                  <div id="presidente3" class="row nome"></div>
+                  <div id="svg3" class="row"></div>
+                </div>
+                <div class="row">
+                  <div id="presidente6" class="row nome"></div>
+                  <div id="svg6" class="row"></div>
+                </div>
+                <div class="row">
+                  <div id="presidente9" class="row nome"></div>
+                  <div id="svg9" class="row"></div>
+                </div>
+                <div class="row empty"></div>
+              </div>
+
+            </div>
+
+            <!---Legenda Minimos Multiplos--->
+              <div class="col-sm-1">
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-8">
+                    <div  id="label">
+                      <div id="label-title" class="">Procentagem Votos</div>
+                      <div id="maxID" class="">Máx</div>
+                      <div id="maxValue" class="">50%</div>
+                      <div id="minID" class="">Min</div>
+                      <div id="minValue" class="">0%</div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+        <script type="text/javascript" src="js/JPESTP1-V1.js"></script>
+        <script type="text/javascript" src="js/presidente.js"></script>
+
+        <!-- Insere nome candidato no  pequeno múltiplo -->
+        <script>
+          for (let j = 0; j < presidents.length; j++){
+            let i = j + 1;
+            let idDiv = '#presidente' + i;
+            $(idDiv).text(presidents[j].key);
+          }
+        </script>
+
+      <hr class="my-4">
+      <!--- Rodapé -->
+      <footer>
+        <div class="container-fluid padding">
+          <div class="row text-bottom">
+            <div class="col-sx-6 col-md-12">
+              <p>Visualização de Dados 2108/2</p>
+            </div>
+            <div class="col-sx-6 col-md-12">
+              <img src="img/ufmg.png" class="img-fluid float-right" alt="Responsive image">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    </body>
+    </html>
